@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url(Fonts/Roboto-Regular.ttf);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto';
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        header>img {
+            width: 50px;
+            filter: invert(1);
+        }
+
+        .links>img {
+            width: 25px;
+            filter: invert(1);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 4fr 2fr;
+            grid-template-rows: 1fr 5fr;
+        }
+
+        .sidebar-left {
+            grid-column: 1/2;
+            grid-row: 1/3;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding: 25px;
+            background-color: #3293D1;
+        }
+
+        .sidebar-left * {
+            color: white;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5px
+        }
+
+        li {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .top {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 40px 15px 15px 40px;
+            box-shadow: 0px 10px 5px -10px rgba(0,0,0,0.5)
+
+        }
+
+        .top input {
+            width: 85%;
+            border-radius: 25px;
+            border:1px solid #DCE2EA;
+            background-color: #DCE2EA;
+        }
+
+        .top img, .account>img{
+            width: 25px;
+        }
+
+        .top-right {
+            grid-column: 3/4;
+        }
+
+        .top-header {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            align-items: center;
+            gap: 20px;
+            padding-top:25px;
+        }
+
+        .top-header img, .account img:last-of-type{
+            border-radius: 50%;
+            image-rendering: optimizeQuality;
+            object-fit: cover;
+            
+        }
+        .top-header img{
+            width: 75px;
+            height: 75px;
+            grid-column: 1/2;
+        }
+
+        .top-right{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 10px 5px -10px rgba(0,0,0,0.5)
+        }
+        .account img:last-of-type{
+          width: 50px;
+          height:50px
+        }
+        .account{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            gap:25px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar-left">
+            <header>
+                <img src="Icons/view-dashboard.svg" alt="">
+                <h1>Dashboard</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li class="links"><img src="Icons/home.svg" alt=""><a href="#">Home</a></li>
+                    <li class="links"><img src="Icons/card-account-details-outline.svg" alt=""><a href="#">Profile</a>
+                    </li>
+                    <li class="links"><img src="Icons/message-reply.svg" alt=""><a href="#">Messages</a></li>
+                    <li class="links"><img src="Icons/clock-time-three.svg" alt=""><a href="#">History</a></li>
+                    <li class="links"><img src="Icons/file-multiple.svg" alt=""><a href="#">Tasks</a></li>
+                    <li class="links"><img src="Icons/account-group.svg" alt=""><a href="#">Communities</a></li>
+                </ul>
+            </nav>
+
+            <div>
+                <ul>
+                    <li class="links"><img src="Icons/cog.svg" alt=""><a href="#">Settings</a></li>
+                    <li class="links"><img src="Icons/help-box.svg" alt=""><a href="#">Support</a></li>
+                    <li class="links"><img src="Icons/shield-check.svg" alt=""><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="top">
+            <img src="Icons/magnify.svg" alt="">
+            <input type="search">
+
+            <div class="top-header">
+                <img src="Img/IMG_20230317_171257.jpg" alt="">
+                <div class="greeting">
+                    <p><strong>Hi there,</strong></p>
+                    <h2>John Lomotan (@Jraymart)</h2>
+                </div>
+            </div>
+        </div>
+        <div class="top-right">
+            <div class="account">
+                <img src="Icons/bell-ring-outline.svg" alt="">
+                <img src="Img/IMG_20230317_171257.jpg" alt="">
+                <h3>John Lomotan</h3>
+            </div>
+            <div class="file-buttons">
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
