@@ -21,116 +21,276 @@
             box-sizing: border-box;
         }
 
-        header>img {
-            width: 50px;
-            filter: invert(1);
+        p {
+            color: #666666;
         }
 
-        .links>img {
-            width: 25px;
-            filter: invert(1);
+        input {
+            background-color: #E1E7EF;
+            width: 100%;
+            height: 95%;
+            border-radius: 25px;
+            border: none;
+        }
+
+        button {
+            border-radius: 25px;
+            background-color: #3293D1;
+            color: white;
+            border: none;
+            width: 100px;
+            height: 40px;
+
+            font-weight: bold;
+        }
+
+        a,
+        h1 {
+            text-decoration: none;
+            color: white;
+        }
+
+        header>img {
+            width: 50px;
+        }
+
+        header,
+        li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: bold;
+
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 15px;
+            padding-left: 10px;
         }
 
         .container {
             display: grid;
-            grid-template-columns: 1fr 4fr 2fr;
+            grid-template-columns: 1fr 5fr;
             grid-template-rows: 1fr 5fr;
+            background-color: #E1E7EF;
         }
 
         .sidebar-left {
-            grid-column: 1/2;
-            grid-row: 1/3;
             display: flex;
             flex-direction: column;
-            gap: 25px;
-            padding: 25px;
+            grid-column: 1/2;
+            grid-row: 1/3;
             background-color: #3293D1;
+            padding: 15px;
+            gap: 30px;
         }
 
-        .sidebar-left * {
-            color: white;
+        .links>img:hover,
+        a:hover,
+        button:hover {
+            opacity: 75%;
         }
 
-        header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .links>img,
+        .notif,
+        .search {
+            width: 25px;
         }
 
-        ul {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 5px
-        }
-
-        li {
-            display: flex;
-            gap: 10px;
-            align-items: center;
+        .links>img,
+        header>img {
+            filter: invert(2);
         }
 
         .top {
             grid-column: 2/3;
             grid-row: 1/2;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            box-shadow: 5px 10px 10px -10px rgb(0, 0, 0, .5);
+            background-color: white;
+        }
+
+        .middle-top {
             display: flex;
             gap: 15px;
-            flex-wrap: wrap;
-            padding: 40px 15px 15px 40px;
-            box-shadow: 0px 10px 5px -10px rgba(0,0,0,0.5)
-
-        }
-
-        .top input {
-            width: 85%;
-            border-radius: 25px;
-            border:1px solid #DCE2EA;
-            background-color: #DCE2EA;
-        }
-
-        .top img, .account>img{
-            width: 25px;
-        }
-
-        .top-right {
-            grid-column: 3/4;
-        }
-
-        .top-header {
-            display: grid;
-            grid-template-columns: 1fr 4fr;
             align-items: center;
-            gap: 20px;
-            padding-top:25px;
+            padding-left: 15px;
+            padding-top: 15px;
         }
 
-        .top-header img, .account img:last-of-type{
+        .middle-bottom {
+            display: flex;
+            padding-left: 15px;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding: 15px;
+        }
+
+        .user:first-of-type,
+        .trend-item>img {
+            width: 75px;
+            height: 75px;
+        }
+
+        .user:nth-of-type(2) {
+            width: 50px;
+            height: 50px;
+        }
+
+        .user {
             border-radius: 50%;
             image-rendering: optimizeQuality;
             object-fit: cover;
-            
-        }
-        .top-header img{
-            width: 75px;
-            height: 75px;
-            grid-column: 1/2;
         }
 
-        .top-right{
+        .right {
             display: grid;
+            grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0px 10px 5px -10px rgba(0,0,0,0.5)
         }
-        .account img:last-of-type{
-          width: 50px;
-          height:50px
-        }
-        .account{
-            display:flex;
+
+        .account {
+            display: flex;
+            justify-content: end;
+            margin-right: 50px;
             align-items: center;
-            justify-content: center;
-            gap:25px
+            gap: 15px;
+        }
+
+        .file-buttons {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 15px
+        }
+
+        .projects {
+            grid-row: 2/3;
+            grid-column: 2/3;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 25px;
+            padding: 25px;
+        }
+
+        .news,
+        .project-items,
+        .trends {
+            display: grid;
+            gap: 25px;
+
+            grid-template-rows: 25px;
+        }
+
+        .project-items {
+            grid-row: 1/3;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 250px;
+        }
+
+        .project-items>h4,
+        .news>h4,
+        .trends>h4 {
+            align-self: end;
+            grid-column: 1/3;
+        }
+
+        .project-item {
+            border-left: 15px solid#ECAF37;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fav-add-share {
+            margin-top: auto;
+            align-self: end;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .fav,
+        .share,
+        .add {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            width: 25px;
+            height: 25px;
+        }
+
+        .fav {
+            background-image: url(Icons/star-plus-outline.svg);
+        }
+
+        .share {
+            background-image: url(Icons/source-fork.svg);
+        }
+
+        .add {
+            background-image: url(Icons/eye-plus-outline.svg);
+        }
+
+
+        .project-item,
+        .news-container,
+        .trend-container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 5px 10px 10px -10px rgb(0, 0, 0, .5);
+        }
+
+        .news,
+        .trends {
+            grid-template-columns: 1fr;
+        }
+
+        .news-container,
+        .trend-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: space-around;
+        }
+
+        .news-item>p {
+            width: 250px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+            font-size: 14px;
+        }
+
+        .trend-item {
+            display: grid;
+            grid-template-columns: 75px 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .trend-item>img {
+            grid-column: 1/2;
+            grid-row: 1/3;
+        }
+
+        .trend-item>p {
+            align-self: top;
+            font-size: 14px;
+        }
+
+        .trend-item>h5 {
+            align-self: end;
         }
     </style>
 </head>
@@ -144,47 +304,177 @@
             </header>
             <nav>
                 <ul>
-                    <li class="links"><img src="Icons/home.svg" alt=""><a href="#">Home</a></li>
-                    <li class="links"><img src="Icons/card-account-details-outline.svg" alt=""><a href="#">Profile</a>
+                    <li class="links"><img src="Icons/home.svg" alt="home"><a href="#">Home</a></li>
+                    <li class="links"><img src="Icons/card-account-details-outline.svg" alt="profile"><a
+                            href="#">Profile</a>
                     </li>
-                    <li class="links"><img src="Icons/message-reply.svg" alt=""><a href="#">Messages</a></li>
-                    <li class="links"><img src="Icons/clock-time-three.svg" alt=""><a href="#">History</a></li>
-                    <li class="links"><img src="Icons/file-multiple.svg" alt=""><a href="#">Tasks</a></li>
-                    <li class="links"><img src="Icons/account-group.svg" alt=""><a href="#">Communities</a></li>
+                    <li class="links"><img src="Icons/message-reply.svg" alt="messages"><a href="#">Messages</a></li>
+                    <li class="links"><img src="Icons/clock-time-three.svg" alt="history"><a href="#">History</a></li>
+                    <li class="links"><img src="Icons/file-multiple.svg" alt="tasks"><a href="#">Tasks</a></li>
+                    <li class="links"><img src="Icons/account-group.svg" alt="communities"><a href="#">Communities</a>
+                    </li>
                 </ul>
             </nav>
 
             <div>
                 <ul>
-                    <li class="links"><img src="Icons/cog.svg" alt=""><a href="#">Settings</a></li>
-                    <li class="links"><img src="Icons/help-box.svg" alt=""><a href="#">Support</a></li>
-                    <li class="links"><img src="Icons/shield-check.svg" alt=""><a href="#">Privacy</a></li>
+                    <li class="links"><img src="Icons/cog.svg" alt="settings"><a href="#">Settings</a></li>
+                    <li class="links"><img src="Icons/help-box.svg" alt="support"><a href="#">Support</a></li>
+                    <li class="links"><img src="Icons/shield-check.svg" alt="privacy"><a href="#">Privacy</a></li>
                 </ul>
             </div>
         </div>
-
         <div class="top">
-            <img src="Icons/magnify.svg" alt="">
-            <input type="search">
+            <div class="middle">
+                <div class="middle-top">
+                    <img src="Icons/magnify.svg" alt="search" class="search">
+                    <input type="search">
+                </div>
 
-            <div class="top-header">
-                <img src="Img/IMG_20230317_171257.jpg" alt="">
-                <div class="greeting">
-                    <p><strong>Hi there,</strong></p>
-                    <h2>John Lomotan (@Jraymart)</h2>
+                <div class="middle-bottom">
+                    <img src="Img/IMG_20230317_171257.jpg" alt="profile-picture" class="user">
+                    <div class="greeting">
+                        <p><strong>Hi there,</strong></p>
+                        <h2>John Lomotan (@Jraymart)</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="account">
+                    <img src="Icons/bell-ring-outline.svg" alt="notifications" class="notif">
+                    <img src="Img/IMG_20230317_171257.jpg" alt="profile" class="user">
+                    <h3>John Lomotan</h3>
+                </div>
+                <div class="file-buttons">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
                 </div>
             </div>
         </div>
-        <div class="top-right">
-            <div class="account">
-                <img src="Icons/bell-ring-outline.svg" alt="">
-                <img src="Img/IMG_20230317_171257.jpg" alt="">
-                <h3>John Lomotan</h3>
+
+        <div class="projects">
+
+            <div class="project-items">
+                <h4>Your Projects</h4>
+                <div class="project-item">
+                    <h4>Super Cool Project</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolor quisquam eaque esse amet
+                        soluta ut a sequi, inventore ullam cum voluptatem impedit et in corporis fugiat ab, veritatis
+                        ratione!</p>
+                    <div class="fav-add-share">
+                        <button class="fav"></button>
+                        <button class="add"></button>
+                        <button class="share"></button>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h4>Less Cool Project</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo vero totam maiores, eveniet itaque
+                        odio dolorum tempore architecto deleniti doloribus excepturi veritatis magni libero. Quo sequi
+                        numquam similique maxime voluptatum?</p>
+                    <div class="fav-add-share">
+                        <button class="fav"></button>
+                        <button class="add"></button>
+                        <button class="share"></button>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h4>Impossible App</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eligendi optio itaque velit
+                        minima totam voluptas maiores voluptate officiis voluptatem, repellendus earum voluptatum
+                        doloremque molestiae dolore nesciunt aut tenetur sapiente?</p>
+                    <div class="fav-add-share">
+                        <button class="fav"></button>
+                        <button class="add"></button>
+                        <button class="share"></button>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h4>Easy Peasy App</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nisi quaerat assumenda iusto?
+                        Architecto ipsam iure quam iste nulla vero excepturi repellat dicta at! Laudantium maxime enim
+                        recusandae fugit officiis!</p>
+                    <div class="fav-add-share">
+                        <button class="fav"></button>
+                        <button class="add"></button>
+                        <button class="share"></button>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h4>Ad Blocker</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere libero magni est quod
+                        perferendis alias dolor cum sit, dolorem, nisi vitae quis eius obcaecati eligendi tenetur vel.
+                        Vero, soluta quo.</p>
+                    <div class="fav-add-share">
+                        <button class="fav"></button>
+                        <button class="add"></button>
+                        <button class="share"></button>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h4>Money Maker</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus incidunt tenetur quod laborum
+                        officia earum, fuga repellat voluptas aspernatur suscipit porro ipsa quam, sapiente totam
+                        laudantium, obcaecati expedita possimus. Soluta.</p>
+                    <div class="fav-add-share">
+                        <button class="fav"></button>
+                        <button class="add"></button>
+                        <button class="share"></button>
+                    </div>
+                </div>
+
             </div>
-            <div class="file-buttons">
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
+
+            <div class="news">
+                <h4>Announcements</h4>
+                <div class="news-container">
+                    <div class="news-item">
+                        <h5>Site Maintenance</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, ut magnam. Quia ipsum
+                            incidunt minima amet! Ut deleniti temporibus facilis. Sunt repudiandae blanditiis officia
+                            unde commodi impedit possimus, est maxime.</p>
+                    </div>
+                    <hr>
+                    <div class="news-item">
+                        <h5>Community Share Day</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, ut magnam. Quia ipsum
+                            incidunt minima amet! Ut deleniti temporibus facilis. Sunt repudiandae blanditiis officia
+                            unde commodi impedit possimus, est maxime.</p>
+                    </div>
+                    <hr>
+                    <div class="news-item">
+                        <h5>Update Privacy Policy</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, ut magnam. Quia ipsum
+                            incidunt minima amet! Ut deleniti temporibus facilis. Sunt repudiandae blanditiis officia
+                            unde commodi impedit possimus, est maxime.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="trends">
+                <h4>Trending</h4>
+                <div class="trend-container">
+                    <div class="trend-item">
+                        <img src="Icons/github.svg" alt="github">
+                        <h5>@Jraymart</h5>
+                        <p>Coding Progress / Projects</p>
+                    </div>
+                    <div class="trend-item">
+                        <img src="Icons/linkedin.svg" alt="linkedin">
+                        <h5>@JohnRaymart</h5>
+                        <p> Connect with me</p>
+                    </div>
+                    <div class="trend-item">
+                        <img src="Icons/instagram.svg" alt="instagram">
+                        <h5>@Jraymart</h5>
+                        <p>Look at my cool stuff</p>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
